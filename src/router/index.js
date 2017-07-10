@@ -21,9 +21,12 @@ export default new Router({
   routes: [
         {
           path: '/',
-          redirect: {
-              name:'login'
-          }
+          redirect:'/login'
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: Login
         },
         {
           path: '/wechat',
@@ -33,21 +36,33 @@ export default new Router({
               {
                   path: 'chat',
                   name: 'chat',
+                  meta: {
+                      requireAuth:true
+                  },
                   component: Chat
               },
               {
                   path: 'contact',
                   name: 'contact',
+                  meta: {
+                      requireAuth:true
+                  },
                   component: Contact
               },
               {
                   path: 'discover',
                   name: 'discover',
+                  meta: {
+                      requireAuth:true
+                  },
                   component: Discover
               },
               {
                   path: 'me',
                   name: 'me',
+                  meta: {
+                      requireAuth:true
+                  },
                   component: Me
               }
           ]
@@ -56,12 +71,10 @@ export default new Router({
         {
           path: '/wechat/common/add-friend',
           name: 'add',
+          meta: {
+              requireAuth:true
+          },
           component: AddFriend
-        },
-        {
-            path: '/login',
-            name: 'login',
-            component: Login
         }
   ]
 })

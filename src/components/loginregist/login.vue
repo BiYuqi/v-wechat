@@ -5,13 +5,13 @@
             <div class="item-wrap">
                 <label for="">账号</label>
                 <div class="item">
-                    <input type="text" name="" value="" v-model="userNumber">
+                    <input type="text" name="" value="" v-model="form.userName">
                 </div>
             </div>
             <div class="item-wrap">
                 <label for="">密码</label>
                 <div class="item">
-                    <input type="text" name="" value="" v-model="userPass">
+                    <input type="text" name="" value="" v-model="form.userPass">
                 </div>
             </div>
             <div class="item-wrap">
@@ -24,33 +24,39 @@
     </div>
 </template>
 <script>
-import Page from '@/components/tab/page'
-import NavBar from '@/components/tab/nav-bar'
-import NavBack from '@/components/tab/nav-back'
+import { mapActions } from 'vuex'
 export default {
     data() {
         return {
             pageIndex: 0,
-            userNumber:'',
-            userPass:''
-        }
-    },
-    methods: {
-        login() {
-            if(this.userNumber && this.userPass){
-                this.$router.replace({
-                    name:"chat",
-                    query:{
-                        mode:"fade"
-                    }
-                })
+            form:{
+                userName:'',
+                userPass:'',
+                token:new Date().getTime()
             }
         }
     },
+    methods: {
+        ...mapActions(['USER_SIGNIN']),
+        login () {
+            if(!this.form.token || !this.form.userPass){
+                return
+            }
+            console.log(this.form)
+            this.USER_SIGNIN(this.form)
+            this.$router.replace({
+                name:"chat",
+                query:{
+                    mode:"fade"
+                }
+            })
+        }
+    },
+    mounted() {
+        console.log(this.$store.state.user)
+    },
     components: {
-        Page,
-        NavBar,
-        NavBack
+
     }
 
 }
