@@ -22,7 +22,7 @@ export default new Router({
         {
           path: '/',
           redirect: {
-              name:'chat'
+              name:'login'
           }
         },
         {

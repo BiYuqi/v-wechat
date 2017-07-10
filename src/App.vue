@@ -70,6 +70,7 @@ export default {
     }
     body{
         font-size: .28rem;
+        overflow: hidden;
     }
     // 转场动画
     // -------------------
