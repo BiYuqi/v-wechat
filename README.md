@@ -32,7 +32,10 @@
 * 登录拦截
 
 # 看下效果
+### 01
 ![](http://oq4hkch8e.bkt.clouddn.com/wechat.gif)
+### 02
+![](http://oq4hkch8e.bkt.clouddn.com/aboutme-01.gif)
 
 # vue-transtion
 
