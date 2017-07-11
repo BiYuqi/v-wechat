@@ -8,6 +8,7 @@
         <section class="con" :class="{subtitle,detail,center}">
             <span class="title">{{title}}</span>
             <span class="subtitle" v-if="subtitle || detail">{{subtitle || detail}}</span>
+            <slot name="photo"></slot>
         </section>
         <div class="more" v-if="more || disclosure">
             <div class="button" v-if="more">

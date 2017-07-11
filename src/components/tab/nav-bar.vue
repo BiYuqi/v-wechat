@@ -3,7 +3,7 @@
         <div class="left">
             <slot name="left"></slot>
         </div>
-        <div class="title">
+        <div class="title" :class="{vertivalLine}">
             <slot name="title"></slot>
         </div>
         <div class="right">
@@ -13,6 +13,8 @@
 </template>
 <script>
 export default {
+    // 字体是否有竖线
+    props:['vertivalLine'],
     data() {
         return {
 
@@ -32,16 +34,29 @@ export default {
     background-color: #393a3f;
     z-index:100;
     .title{
-        @include abs(0,.24rem,0,50%);
+        @include abs(0,.24rem,0,25%);
         width: 20%;
         transform: translateX(-50%);
+        padding-left: .21rem;
+        &.vertivalLine:after{
+            content: '';
+            display: block;
+            width: 1px;
+            height: .4rem;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1e1e1e;
+        }
     }
     .left {
         @include abs(auto, auto,0,.24rem);
         font-size: .2rem;
+        height: 100%;
     }
     .right {
-        @include abs(0.04rem,.24rem,0,auto);
+        @include abs(auto,.24rem,0,auto);
     }
 }
 

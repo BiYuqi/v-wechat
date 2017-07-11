@@ -4,10 +4,10 @@ import Router from 'vue-router'
 
 // 主界面
 import WeChat from '@/components/wechat'
-import Chat from '@/components/contact/chat'
-import Contact from '@/components/contact/contact'
-import Discover from '@/components/contact/discover'
-import Myself from '@/components/contact/myself'
+import Chat from '@/components/layout/chat'
+import Contact from '@/components/layout/contact'
+import Discover from '@/components/layout/discover'
+import Myself from '@/components/layout/myself'
 
 //
 import AddFriend from '@/components/common/add-friend'
@@ -17,6 +17,7 @@ import Login from '@/components/login/login'
 
 // 我 界面
 import Me from '@/components/login/user'
+import nickName from '@/components/me/nickname'
 Vue.use(Router)
 
 export default new Router({
@@ -79,9 +80,16 @@ export default new Router({
       component: AddFriend
     },
     {
-      path:'/wechat/chat/me',
+      path:'/wechat/myself/me',
       name:'me',
       component:Me
+    },
+    {
+        path:'/wechat/myself/nickname',
+        name:'nickname',
+        component:nickName
     }
+
+
   ]
 })

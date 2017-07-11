@@ -2,7 +2,7 @@
     <div class="profile">
         <tab-group>
             <tab-cell class="head"
-                :title="user.name"
+                :title="user.nickName"
                 :subtitle="'微信号:'+user.username"
                 large = true
                 contact = true
@@ -68,11 +68,13 @@
     import select from '@/assets/icons/select.svg'
     import smile from '@/assets/icons/smile.svg'
     import wallet from '@/assets/icons/wallet.svg'
+    // 修改当前路由状态
+    import { mapActions } from 'vuex'
     export default {
         data() {
             return {
                 user:{
-                    name:"LoadingMore",
+                    nickName:"LoadingMore",
                     username:"biyuqi6138"
                 },
                 img:{
@@ -103,10 +105,20 @@
                         name:"设置",
                         icon:setting
                     }
-                ]
+                ],
+                formRouter:[]
             }
         },
+        mounted() {
+            // 利用本地存储进行名字修改
+            const UNAME = JSON.parse(sessionStorage.getItem('UNAME'));
+            if(UNAME){
+                this.user.nickName = UNAME;
+            }
+            console.log(this.user)
+        },
         methods:{
+            ...mapActions(['CUR_ROUTER']),
             aboutMe() {
                 this.$router.replace({
                     name:'me',
@@ -114,6 +126,8 @@
                         mode:"push"
                     }
                 })
+                this.formRouter.push('myself')
+                this.CUR_ROUTER(this.formRouter);
             }
         },
         components: {

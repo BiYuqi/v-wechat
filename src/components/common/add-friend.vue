@@ -4,6 +4,11 @@
             <span slot="title">添加朋友</span>
             <nav-back slot="left" @click.native="$router.replace({name: 'chat', query: {mode: 'pop'}})"></nav-back>
         </nav-bar>
+        <template slot="main">
+            <div class="test-add-friend">
+                dsffd
+            </div>
+        </template>
     </page>
 </template>
 <script>
@@ -31,5 +36,9 @@ export default {
     .add-friend{
         height: 100%;
         background-color: rgb(185, 175, 101);
+    }
+    .test-add-friend{
+        background-color: #c33;
+        height: 100%;
     }
 </style>

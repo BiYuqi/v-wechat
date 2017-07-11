@@ -74,12 +74,14 @@ export default {
         }
         h3{
             color: #fff;
+            text-align: center;
         }
         .btn-sure{
             @include lh(.8rem);
             color: #fff;
             background-color: rgb(65, 172, 125);
             border-radius: .06rem;
+            text-align: center;
         }
         .item-wrap {
             position: relative;
