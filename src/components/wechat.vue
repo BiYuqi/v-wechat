@@ -1,7 +1,7 @@
 <template>
     <page marginBottom="true">
         <nav-bar slot="nav-bar">
-            <span slot="left" class="title_wx ">微信</span>
+            <span slot="left" class="title_wx">微信</span>
             <span slot="right" class="add-modal" @click="add" v-if="pageIndex < 2">+</span>
         </nav-bar>
         <template slot="main">
@@ -46,6 +46,6 @@ export default {
         font-size: .32rem;
         margin-top:.02rem;
         display: block;
-        
+
     }
 </style>

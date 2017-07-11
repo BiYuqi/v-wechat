@@ -30,7 +30,7 @@
                     {
                         title: '我',
                         icon: 'icon-wo',
-                        to: {name:'me'}
+                        to: {name:'myself'}
                     }
                 ]
             }
@@ -43,10 +43,10 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 1rem;
+        height: 1.2rem;
 
         border-top: 1px solid #eee;
-        background: rgba(235, 235, 235, .95);
+        background: #FCFCFC;
 
         z-index: 100;
         display: flex;

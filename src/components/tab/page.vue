@@ -20,6 +20,7 @@
     }
 </script>
 <style lang="scss" scoped>
+@import '../../assets/mixin';
     .page{
         width: 100%;
         height: 100%;
@@ -29,9 +30,10 @@
         .main{
             height: 100%;
             box-sizing: border-box;
-            padding-top: 1.28rem;
-            // background: #efefef;
+            padding-top: 1rem;
             overflow-y: scroll;
+            background: $bgColor;
+
             &.margin-bottom {
                 padding-bottom: 1.18rem;
             }
