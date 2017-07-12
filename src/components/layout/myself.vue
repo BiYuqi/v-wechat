@@ -5,7 +5,6 @@
                 :title="user.nickName"
                 :subtitle="'微信号:'+user.username"
                 large = true
-                contact = true
                 disclosure = true
                 @click.native="aboutMe">
                 <div slot="iconfont">
@@ -41,7 +40,8 @@
                 </div>
             </tab-cell>
             <tab-cell :title="icons[3].name"
-                        disclosure = true>
+                        disclosure = true
+                        @click.native="smileshop">
                 <div slot="iconfont">
                     <img :src="icons[3].icon" slot="imgs" alt="">
                 </div>
@@ -120,6 +120,14 @@
                     name:'me',
                     query:{
                         mode:"push"
+                    }
+                })
+            },
+            smileshop() {
+                this.$router.replace({
+                    name:'smileshop',
+                    query:{
+                        mode:'push'
                     }
                 })
             }

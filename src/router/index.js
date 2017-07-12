@@ -18,6 +18,7 @@ import Login from '@/components/login/login'
 // 我 界面
 import Me from '@/components/login/user'
 import nickName from '@/components/me/nickname'
+import Smileshop from '@/components/me/smile-shop'
 Vue.use(Router)
 
 export default new Router({
@@ -88,6 +89,11 @@ export default new Router({
         path:'/wechat/myself/nickname',
         name:'nickname',
         component:nickName
+    },
+    {
+        path:'/wechat/myself/smileshop',
+        name:'smileshop',
+        component:Smileshop
     }
 
 

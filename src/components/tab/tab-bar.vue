@@ -37,7 +37,22 @@
         },
         watch: {
             '$route'(to, from) {
-                console.log(from.path)
+                let mainRouter = to.path,
+                    reg = /\/([\w-]+)$/,
+                    lastRouter = reg.exec(mainRouter)[1];
+                /*
+                *   此处为监控主界面 四个tab路由
+                *   目的是由于左上角有需要跳转路由的地方，由于头部为公用组件，
+                *   所以需要动态的检测返回时 返回到哪一个路由
+                *   此处方法为监控到跳转前所在的路由 临时存储为在sessionStorage
+                */
+                if(sessionStorage.getItem('memory')){
+                    let data = JSON.parse(sessionStorage.getItem('memory'))
+                    data.memory = lastRouter
+                    sessionStorage.setItem('memory',JSON.stringify(data))
+                }else{
+                    sessionStorage.setItem('memory',JSON.stringify({memory:lastRouter}))
+                }
              }
         }
     }

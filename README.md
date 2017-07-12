@@ -1,12 +1,13 @@
 # 目前进度
 - [x] 整体框架搭建(主界面构建完毕)
 - [x] 路由切换(包括专转场动画,目前只做了添加朋友页面进行测试)
+- [x] 路由监听tab-bar(完善在主界面，从头部跳转的页面，返回时回到之前对应的路由)
 - [x] 使用sass编写，采用网易rem解决方案来解决移动端适配问题
 - [ ] 聊天列表(点击聊天，长恩删除等)
 - [ ] 通讯录模块(列表)
 - [ ] 发现(列表)
 - [x] 我(列表,包括tab-cell组件)
-- [x] 查看个人信息，修改昵称
+- [x] 查看个人信息，支持修改昵称
 - [x] 登录
 - [ ] 注册
 - [ ] 搜索
@@ -18,7 +19,7 @@
 - [ ] 钱包
 - [ ] 相册
 - [ ] 卡包
-- [ ] 表情(里面的轮播，tab切换)
+- [x] 表情(已完成tab切换,架构编写，带写轮播，lists)
 - [ ] 设置(包括里面的子模块)
 
 # 通过该项目能学到什么
@@ -33,9 +34,9 @@
 
 # 看下效果
 ### 01
-![](http://oq4hkch8e.bkt.clouddn.com/wechat.gif)
+![](http://oq4hkch8e.bkt.clouddn.com/wechat.gif)![](http://oq4hkch8e.bkt.clouddn.com/aboutme-01.gif)
 ### 02
-![](http://oq4hkch8e.bkt.clouddn.com/aboutme-01.gif)
+
 
 # vue-transtion
 

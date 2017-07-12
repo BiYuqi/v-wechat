@@ -30,7 +30,7 @@
         .main{
             height: 100%;
             box-sizing: border-box;
-            padding-top: 1rem;
+            padding-top: 1.2rem;
             overflow-y: scroll;
             background: $bgColor;
 

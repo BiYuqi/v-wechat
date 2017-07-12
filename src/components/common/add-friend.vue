@@ -19,18 +19,21 @@ export default {
     data() {
         return {
             pageIndex: 0,
-            backTo:'chat'
+            backTo:''
         }
     },
     methods: {
 
     },
     mounted() {
-        // 利用本地存储进行名字修改
-        // const lastRouter = JSON.parse(sessionStorage.getItem('lr'));
-        // if(lastRouter){
-        //     this.backTo = lastRouter.pop();
-        // }
+        // 利用本tab组件存储的状态路由 进行动态的修改返回路由
+        const lastRouter = JSON.parse(sessionStorage.getItem('memory'));
+        if(lastRouter){
+            this.backTo = lastRouter.memory
+        }else{
+            this.backTo = 'chat'
+        }
+
     },
     components: {
         Page,

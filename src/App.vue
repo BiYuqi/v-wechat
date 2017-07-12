@@ -67,6 +67,9 @@ export default {
         text-decoration: none;
         color: #666;
     }
+    ul{
+        list-style: none;
+    }
     body{
         font-size: .28rem;
         overflow-x: hidden;

@@ -3,19 +3,16 @@
         <h3>使用账号和密码登录</h3>
         <form>
             <div class="item-wrap">
-                <label for="">账号</label>
                 <div class="item">
-                    <input type="text" name="" value="" v-model="form.userName">
+                    <input type="text" placeholder="请输入账号" v-model="form.userName">
                 </div>
             </div>
             <div class="item-wrap">
-                <label for="">密码</label>
                 <div class="item">
-                    <input type="text" name="" value="" v-model="form.userPass">
+                    <input type="text" placeholder="请输入密码" v-model="form.userPass">
                 </div>
             </div>
             <div class="item-wrap">
-                <label for=""></label>
                 <div class="item btn-sure" @click="login">
                     登录
                 </div>
@@ -86,7 +83,6 @@ export default {
         .item-wrap {
             position: relative;
             max-width: 100%;
-            padding-left: .8rem;
             height: .8rem;
             margin: .6rem 0;
 

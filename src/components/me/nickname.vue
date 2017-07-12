@@ -65,9 +65,9 @@ export default {
             text-align: center;
         }
         .input{
-            width: 5rem;
-            height: 1rem;
-            margin: .5rem auto;
+            width: 80%;
+            height: 1.2rem;
+            margin: 1rem auto;
             text-align: left;
             input{
                 outline: none;
@@ -79,7 +79,7 @@ export default {
                 margin-bottom: .2rem;
             }
             span{
-                font-size: .12rem;
+                font-size: .3rem;
             }
         }
     }

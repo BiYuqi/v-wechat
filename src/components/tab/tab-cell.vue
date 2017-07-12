@@ -32,7 +32,7 @@ export default {
 
     .tab-cell{
         position: relative;
-        height: 1rem;
+        height: 1.2rem;
         background-color: #fff;
         padding: 0 12px;
         @include flex(flex-start);
@@ -55,7 +55,9 @@ export default {
         .con{
             width: 100%;
             line-height: 1.8;
-            margin: auto .16rem;
+            margin: auto .36rem;
+            font-size: .32rem;
+            font-weight: 600;
             @include flex(flex-start);
 
             &.subtitle {
@@ -97,7 +99,7 @@ export default {
 
         // 大cell
         &.large {
-            height:1.56rem;
+            height:1.6rem;
             .header-img {
                 width: 1rem;
                 height: 1rem;

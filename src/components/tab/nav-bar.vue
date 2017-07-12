@@ -27,36 +27,42 @@ export default {
 
 .nav-bar{
     @include abs(0,0,auto,0)
-    height:1rem;
+    height:1.2rem;
     padding: .4rem .24rem 0;
     color: #fff;
-    line-height: 1rem;
     background-color: #393a3f;
     z-index:100;
+    font-size: .32rem;
     .title{
-        @include abs(0,.24rem,0,25%);
+        @include abs(50%,auto,0,2rem);
         width: 20%;
-        transform: translateX(-50%);
-        padding-left: .21rem;
+        height: 1.2rem;
+        line-height: 1.2rem;
+        transform: translate(-50%,-50%);
         &.vertivalLine:after{
             content: '';
             display: block;
             width: 1px;
             height: .4rem;
             position: absolute;
-            left: 0;
+            left: -0.2rem;
             top: 50%;
             transform: translateY(-50%);
             background: #1e1e1e;
         }
     }
     .left {
-        @include abs(auto, auto,0,.24rem);
+        @include abs(50%, auto,0,.24rem);
+        transform: translateY(-50%);
         font-size: .2rem;
-        height: 100%;
+        height: 1.2rem;
+        line-height: 1.2rem;
     }
     .right {
-        @include abs(auto,.24rem,0,auto);
+        @include abs(50%,.22rem,0,auto);
+        height: 1.2rem;
+        line-height: 1.2rem;
+        transform: translateY(-50%);
     }
 }
 
