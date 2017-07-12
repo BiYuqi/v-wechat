@@ -15,7 +15,7 @@
                 </tab-cell>
                 <tab-cell title="微信号"
                           detail = "biyuqi6138"
-                          @click.native="myadress">
+                          >
                 </tab-cell>
                 <tab-cell title="二维码名片"
                           detail = "...">

@@ -68,8 +68,7 @@
     import select from '@/assets/icons/select.svg'
     import smile from '@/assets/icons/smile.svg'
     import wallet from '@/assets/icons/wallet.svg'
-    // 修改当前路由状态
-    import { mapActions } from 'vuex'
+
     export default {
         data() {
             return {
@@ -105,8 +104,7 @@
                         name:"设置",
                         icon:setting
                     }
-                ],
-                formRouter:[]
+                ]
             }
         },
         mounted() {
@@ -115,10 +113,8 @@
             if(UNAME){
                 this.user.nickName = UNAME;
             }
-            console.log(this.user)
         },
         methods:{
-            ...mapActions(['CUR_ROUTER']),
             aboutMe() {
                 this.$router.replace({
                     name:'me',
@@ -126,8 +122,6 @@
                         mode:"push"
                     }
                 })
-                this.formRouter.push('myself')
-                this.CUR_ROUTER(this.formRouter);
             }
         },
         components: {

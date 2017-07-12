@@ -14,13 +14,18 @@
 import Page from '@/components/tab/page'
 import NavBar from '@/components/tab/nav-bar'
 import TabBar from '@/components/tab/tab-bar'
+// 修改当前路由状态
+import { mapActions } from 'vuex'
 export default {
     data() {
         return {
-            pageIndex: 0
+            pageIndex: 0,
+            formRouter:[],
+            realUrl:''
         }
     },
     methods: {
+        ...mapActions(['CUR_ROUTER']),
         add() {
             this.$router.replace({
                 name: 'add',

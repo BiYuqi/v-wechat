@@ -34,6 +34,11 @@
                     }
                 ]
             }
+        },
+        watch: {
+            '$route'(to, from) {
+                console.log(from.path)
+             }
         }
     }
 </script>
@@ -68,7 +73,7 @@
         }
         .router-link-active {
             // 选中颜色
-            color: green;
+            color: #49C01B;
         }
     }
 </style>
