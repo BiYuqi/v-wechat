@@ -70,7 +70,7 @@ export default {
             text-align: center;
             position: relative;
             &.active{
-                color: green;
+                color: $baseColor;
             }
             &.active:after{
                 display: block;
@@ -78,7 +78,7 @@ export default {
                 @include abs(auto,auto,-0.04rem,0);
                 height: .04rem;
                 width: 100%;
-                border-bottom: .04rem solid green;
+                border-bottom: .04rem solid $baseColor;
             }
         }
 
